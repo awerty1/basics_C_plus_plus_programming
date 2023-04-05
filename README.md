@@ -1,2 +1,3 @@
 # basics-C-programming
-Basics of programming in c++  University: Vologda State University
+Basics of programming in C++    
+University: Vologda State University
