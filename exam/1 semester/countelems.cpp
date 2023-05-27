@@ -64,7 +64,7 @@ int main()
     //Удаление дублирующего элемента
     for (int i = 0; i < SIZE; i++)
     {
-    	    if (i[arrayA] == arrayA[i+1])
+    	    if (arrayA[i] == arrayA[i+1])
     	    {
     	        for(int j = i; j < SIZE; j++)
     	        {
