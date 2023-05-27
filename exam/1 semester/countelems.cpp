@@ -8,7 +8,6 @@ using namespace std;
 
 
 
-
 int main()
 {
     size_t SIZE;
@@ -60,7 +59,9 @@ int main()
     for(int i = 0; i < SIZE; i++)
     {
         cout << arrayA[i] << " ";
-    }     
+    } 
+	
+	
     //Удаление дублирующего элемента
     for (int i = 0; i < SIZE; i++)
     {
