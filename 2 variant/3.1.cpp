@@ -26,16 +26,16 @@ int main()
     cin>>SIZE;
     int arrayA[SIZE];
         
-    // if (SIZE <= 0 || SIZE > 20)
-    // {
-    //     do
-    //     {
-    //       cout<<"\nРазмер массива <= 0 или > 20";
-    //       cout<<"\nВведите размер массива:";
-    //       cin >> SIZE;
-    //       int arrayA[SIZE];
-    //     }while(SIZE <= 0 || SIZE > 20);
-    // }
+    if (SIZE <= 0 || SIZE > 20)
+    {
+        do
+        {
+          cout<<"\nРазмер массива <= 0 или > 20";
+          cout<<"\nВведите размер массива:";
+          cin >> SIZE;
+          int arrayA[SIZE];
+        }while(SIZE <= 0 || SIZE > 20);
+    }
     
     srand(time(0));
     
@@ -48,13 +48,13 @@ int main()
          cout << arrayA[i] << " "<< setw(2);
      }
      
-     int count = 0;
+     int count_neg = 0;
      int max_neg = arrayA[0];
      for(int i = 0; i < SIZE; i++) 
      {
          if (arrayA[i] < 0)
          {
-             count++;
+             count_neg++;
              if (abs(max_neg) > abs(arrayA[i]))
                 max_neg = arrayA[i];
          }
@@ -82,8 +82,8 @@ int main()
 //             max_neg = arrayA[i];
 //      }
      
-	 cout<<"\nmax el: "<<max_neg;
-	 cout<<"\ncount: "<<count;
+	 cout<<"\nМаксимальный элемент среди отрицательных чисел: "<<max_neg;
+	 cout<<"\nКоличество негативных элементов: "<<count_neg;
      
     return 0;
 }
