@@ -12,35 +12,47 @@
 
 #include <iostream>
 #include <ostream>
+#include <iomanip>
+
 using namespace std;
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    cout << "Введите число n больше 0";
-    int n = 0, m = 0;
+    cout << "Введите число n больше 0:";
+    int n = 0; 
+    int m = 0;
     do
-    {
+	{
         cin >> n;
-        if(n<=0)
-            cout << "Число n должно быть больше 0";
-    }while(n<=0);
-    n--;
+        if (n <= 0)
+            cout << "Число n должно быть больше 0:";
+    } 
+	while (n <= 0);
     
     int** array = new int*[n];
-    for(int i = 0; i<=n;i++)
-        array[i]=new int[n];
-        
-    for(int i = 0; i<=n;i++)
+    for(int i = 0; i < n; i++)
     {
-        for(int j = 0; j<=n;j++)
+        array[i] = new int[n];
+        
+        for(int j = 0; j < n; j++)
         {
-            if(i==j)
+            if(i == j)
+            {
                 array[i][j] = i+1;
+            }
             else
+            {
                 array[i][j] = 0;
-            cout << array[i][j] << "\t";
+            }
+            cout << setw(4) << array[i][j]; // выравнивание по 4 символа
         }
         cout << "\n";
     }
+	
+	for(int i = 0; i < n; i++)
+	{
+		delete[] array[i];
+	}
+	delete[] array;
 }
