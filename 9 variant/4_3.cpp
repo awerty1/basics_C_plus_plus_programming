@@ -9,64 +9,89 @@
 
 #include <iostream>
 #include <ostream>
+#include <iomanip>
+
 using namespace std;
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    cout << "Введите число n больше 0";
-    int n = 0, m = 0, k = 0;
+    cout << "Введите число n больше 0:";
+    
+    int n = 0; 
+    int m = 0; 
+    int k = 0;
+    
     srand(time(NULL));
+    
     do
     {
         cin >> n;
-        if(n<=0)
-            cout << "Число n должно быть больше 0";
-    }while(n<=0);
-    n--;
-    cout << "Введите число m больше 0";
+        if(n <= 0)
+            cout << "Число n должно быть больше 0:";
+    } while(n <= 0);
+
+    
+    cout << "Введите число m больше 0:";
+    
     do
     {
         cin >> m;
-        if(m<=0)
-            cout << "Число m должно быть больше 0";
-    }while(m<=0);
-    m--;
+        if(m <= 0)
+            cout << "Число m должно быть больше 0:";
+    } while(m <= 0);
+
     
-    int** array = new int*[m];
-    for(int i = 0; i<=m;i++)
-        array[i]=new int[n];
-        
-    for(int i = 0; i<=m;i++)
+    int** array = new int*[n];
+    for(int i = 0; i < n; i++)
     {
-        for(int j = 0; j<=n;j++)
+        array[i] = new int[m];
+    }
+        
+        
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < m; j++)
         {
             array[i][j] = rand() % 200-100;
-            cout << array[i][j] << "\t";
+            cout << setw(5) << array[i][j];
         }
         cout << "\n";
     }
-    cout << "Введите намер столбца, который нужно удалить ";
+    
+    cout << "Введите намер столбца, который нужно удалить: ";
+    
     do
     {
         cin >> k;
-        if(k <= 0 || k > n + 1)
-            cout << "Число k должно быть больше 0 и меньше " << n + 2;
-    }while(k <= 0 || k > n + 1);
-    k--; n--;
-    for(int i = 0; i<=m;i++)
+        if(k <= 0 || k > m)
+            cout << "Номер столбца должен быть от 1 до " << m << ":";
+    } while(k <= 0 || k > m);
+    
+    k--; 
+    for(int i = 0; i < n; i++)
     {
-        for(int j = k; j<=n;j++)
+        for(int j = k; j < m; j++)
         {
             array[i][j] = array[i][j+1];
         }
     }
-    for(int i = 0; i<=m;i++)
+    
+    m--;
+    for(int i = 0; i < n; i++)
     {
-        for(int j = 0; j<=n;j++)
+        for(int j = 0; j < m; j++)
         {
-            cout << array[i][j] << "\t";
+            cout << setw(5) <<array[i][j];
         }
         cout << "\n";
     }
+    
+    for(int i = 0; i < n; i++)
+    {
+        delete[] array[i];
+    }
+    delete[] array;
+    
+    return 0;
 }
