@@ -15,14 +15,15 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
     string str = "";
-    cout << "Введите строку ";
+    cout << "Введите строку: ";
     getline(cin, str);
     
-    for(int i = 0; i<str.length();i++)
+    for(int i = 0; i < str.length();i++)
     {
         if(islower(str[i]))
             str[i]='0';
     }
     
+	cout << "Строка после преобразований:"
     cout << str;
 }
