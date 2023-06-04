@@ -8,12 +8,14 @@
 #include <cstdlib>
 #include <iomanip>
 #include <string>
+
 using namespace std;
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
     string strinG, symboL;
+    cout << "Введите строку:";
     getline(cin, strinG);
     for (int i = 0; i < strinG.length(); i++)
     {
@@ -25,5 +27,6 @@ int main()
             i++;
         }
     }
+    cout << "Удвоение гласных:";
     cout << strinG;
 }
