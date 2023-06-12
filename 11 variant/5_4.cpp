@@ -4,6 +4,7 @@
 состоящие из трех букв
 */
 
+/*#variant of lab 1
 #include <iostream>
 #include <cstring>
 
@@ -26,6 +27,7 @@ int main()
 
     return 0;
 }
+*/
 
 /*
 Задание 4. Вводится строка символов, которые разделены на слова.

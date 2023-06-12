@@ -4,7 +4,7 @@
 преобразованную таким образом строку.
 */
 
-//variant 1
+//variant of lab #1
 /*
 #include <iostream>
 #include <string>
