@@ -4,21 +4,29 @@
 */
 
 #include <iostream>
-#include <locale.h>
-
-using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-	int a = 1, b = 1, n;
-	cout << "Введите n \n";
-	cin >> n;
-	while (n--)
+	int a = 1; 
+	int b = 1; 
+	int SIZE;
+	
+	std::cout << "Введите количество чисел Фибоначчи: \n";
+	std::cin >> SIZE;
+	
+	 // Проверка на корректность ввода значения SIZE
+    if (std::cin.fail() || SIZE <= 0)
+    {
+        std::cout << "Ошибка ввода. Пожалуйста, введите положительное целое число.\n";
+        return 1;
+    }
+	
+	while (SIZE--)
 	{
-		cout << a << "\t";
+		std::cout << a << " ";
 		b += a;
 		a = b - a;
 	}
-	system("pause");
+	
+	return 0;
 }

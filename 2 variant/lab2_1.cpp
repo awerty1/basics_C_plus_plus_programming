@@ -4,20 +4,26 @@
 */
 
 #include <iostream>
-#include <locale.h>
-using namespace std;
+
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-	const int s=10;
-	int i, a[s];
-	cout << "Введите 10 чесел" << " \n";
-	for (i = 0;i < s;i++) { cin >> a[i]; }
-	int min = a[0];
-	for (i = 0;i < s;i++)
+	const int SIZE = 10;
+	int numbers[SIZE];
+	std::cout << "Введите 10 чесел: " << " \n";
+	for (int i = 0; i < SIZE;i++) 
+	{ 
+		std::cin >> numbers[i]; 
+	}
+	
+	int min = numbers[0];
+	for (int i = 0; i < SIZE; i++)
 	{
 		//cout << a[i] << "\t";
-		if (min > a[i]) min = a[i];
+		if (min > numbers[i]) 	
+		{
+			min = numbers[i];
+		}
 	}
-	cout << "\n"<<"Минимальное введенное число= " << min << "\n";
+	
+	std::cout << "\n" << "Минимальное введенное число= " << min << "\n";
 }

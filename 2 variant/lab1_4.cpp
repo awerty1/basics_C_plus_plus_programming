@@ -6,17 +6,35 @@
 
 #include <iostream>
 
-using namespace std;
 int main()
 {
-	setlocale(LC_ALL, "Russian");
 	int x, y, z;
-	cout << "Введите длины сторон треугольника \n";
-	cin >> x >> y >> z;
-	if ((x+y>z) || (x+z>y) || (z+y>x))
+	std::cout << "Введите длины сторон треугольника: \n";
+	std::cin >> x >> y >> z;
+	
+	if (x > 0 && y > 0 && z > 0)
 	{
-		if (x==y || y==z || x==z) cout << "Треугольник равнобедренный \n";
-		else cout << "Треугольник не равнобедренный";
+	    if ((x + y > z) || (x + z > y) || (y + z > x))
+	    {
+    		if (x == y || y == z || x == z)
+    		{
+    		    std::cout << "Треугольник равнобедренный\n";
+    		}
+    		else 
+    		{
+    		    std::cout << "Треугольник не равнобедренный\n";
+    		}
+	    }
+	    else
+	    {
+	        std::cout << "Треугольник не существует\n";
+	    }
+	 
 	}
-	else cout << "Введите корректные значения";
+	else
+	{
+	    std::cout << "Введите корректные значения\n";
+	}
+	
+	return 0;
 }

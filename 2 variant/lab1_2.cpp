@@ -4,24 +4,28 @@
 */
 
 #include <iostream>
-#include <stdio.h>
-
-using namespace std;
 
 int main()
 {
-	Int n,s=0;
-	setlocale(LC_ALL, "Russian");
-	cout<< "Введите четырехзначное число \n";
-	cin>> n;
-	if (n <= 9999 and n >= 1000)
+	int number; 
+	int sum=0;
+	
+	std::cout << "Введите четырехзначное число: \n";
+	std::cin >> number;
+	
+	if (number >= 1000 && number <= 9999)
 	{
-		while (n)
-			{
-				s+=(n%10);
-				n/=10;
-			}
-	cout<<"Сумма цифр в числе= "<<s;
+		while (number)
+		{
+			sum += (number % 10);
+			number /= 10;
+		}
+		std::cout << "Сумма цифр в числе: " << sum << "\n";
 	}
-	Else printf("Введено не 4-х значное число");
+	else 
+	{
+		std::cout << "Введено не 4-х значное число\n";
+	}
+	
+	return 0;	
 }
