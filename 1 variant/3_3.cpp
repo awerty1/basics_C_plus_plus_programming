@@ -11,7 +11,7 @@
 
 int main() 
 {
-    int n;
+    std::size_t n;
     
     do {
         std::cout << "Введите количество элементов в массиве (не больше 20): ";
@@ -27,13 +27,13 @@ int main()
     
     int* arr = new int[n];
     std::cout << "Введите элементы массива: ";
-    for (int i = 0; i < n; i++) 
+    for (std::size_t i = 0; i < n; i++) 
     {
         std::cin >> arr[i];
     }
     
     std::cout << "Исходный массив: ";
-    for (int i = 0; i < n; i++) 
+    for (std::size_t i = 0; i < n; i++) 
     {
         std::cout << arr[i] << " ";
     }
@@ -44,7 +44,7 @@ int main()
     std::cin >> insertNum;
 
     int maxIndex = 0;
-    for (int i = 1; i < n; i++) 
+    for (std::size_t i = 1; i < n; i++) 
     {
         if (arr[i] > arr[maxIndex]) 
         {
@@ -53,7 +53,7 @@ int main()
     }
 
     // Сдвигаем элементы вправо, начиная с конца массива
-    for (int i = n; i > maxIndex + 1; i--) 
+    for (std::size_t i = n; i > maxIndex + 1; i--) 
     {
         arr[i] = arr[i - 1];
     }
@@ -65,7 +65,7 @@ int main()
     n++;
 
     // Сдвигаем элементы вправо, начиная с конца массива (снова)
-    for (int i = n; i > maxIndex; i--) 
+    for (std::size_t i = n; i > maxIndex; i--) 
     {
         arr[i] = arr[i - 1];
     }
@@ -77,7 +77,7 @@ int main()
     n++;
 
     std::cout << "Измененный массив: ";
-    for (int i = 0; i < n; i++) 
+    for (std::size_t i = 0; i < n; i++) 
     {
         std::cout << arr[i] << " ";
     }
