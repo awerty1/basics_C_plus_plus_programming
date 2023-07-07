@@ -24,8 +24,8 @@ int main()
         }
     } while (n <= 0 || n > 20);
     
-
-    int arr[20];
+    
+    int* arr = new int[n];
     std::cout << "Введите элементы массива: ";
     for (int i = 0; i < n; i++) 
     {
@@ -82,6 +82,8 @@ int main()
         std::cout << arr[i] << " ";
     }
     std::cout << std::endl;
+    
+    delete[] arr;
 
     return 0;
 }
