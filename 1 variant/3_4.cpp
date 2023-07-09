@@ -12,11 +12,13 @@
 #include <cstdlib>
 #include <ctime>
 
-int* createDynamicArray(int size) {
+int* createDynamicArray(int size) 
+{
     return new int[size];
 }
 
-void deleteDynamicArray(int* arr) {
+void deleteDynamicArray(int* arr) 
+{
     delete[] arr;
 }
 
@@ -55,7 +57,6 @@ int main()
 	}
 	std::cout << std::endl;
 
-	//int C[n];
 	int* C = createDynamicArray(n);
 	int cCount = 0;
 
@@ -87,22 +88,23 @@ int main()
 
   
 	if (cCount)
-    {
-        std::cout << "Массив C: ";
-        for (int i = 0; i < cCount; i++) 
-        {
-            std::cout << C[i] << " ";
-        }
-        std::cout << std::endl;
-    }
-    else
-    {
-        std::cout << "Массив C не содержит элементов." << std::endl;
-    }
+    	{
+	        std::cout << "Массив C: ";
+	        for (int i = 0; i < cCount; i++) 
+	        {
+	            std::cout << C[i] << " ";
+	        }
+		std::cout << std::endl;
+	}
+	else
+	{
+		std::cout << "Массив C не содержит элементов." << std::endl;
+	}
+
 	
 	deleteDynamicArray(A);
-    deleteDynamicArray(B);
-    deleteDynamicArray(C);
+	deleteDynamicArray(B);
+	deleteDynamicArray(C);
 	
 	return 0;
 }
