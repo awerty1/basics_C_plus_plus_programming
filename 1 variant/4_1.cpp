@@ -11,6 +11,7 @@
 */
 
 #include <iostream>
+
 using namespace std;
 
 int main() 
@@ -19,9 +20,11 @@ int main()
     cout << "Введите размер матрицы: ";
     cin >> n;
     
-    int matrix[n][n];
+    int** matrix = new int*[n];
     for (int i = 0; i < n; i++) 
     {
+		matrix[i] = new int[n];
+		
         for (int j = 0; j < n; j++) 
         {
             if (i == j || i + j == n - 1) 
@@ -36,8 +39,14 @@ int main()
             cout << matrix[i][j] << " ";
         }
         
-    cout << endl; // переход на новую строку после каждой строки матрицы
+		cout << endl; // переход на новую строку после каждой строки матрицы
     }
+	
+	for (int i = 0; i < n; i++) 
+    {
+        delete[] matrix[i];
+    }
+    delete[] matrix;
     
     return 0;
 }
