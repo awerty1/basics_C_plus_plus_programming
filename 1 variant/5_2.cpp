@@ -8,7 +8,8 @@
 
 std::string doubleSpaces(const std::string& inputString) 
 {
-	if (inputString.empty()) {
+	if (inputString.empty()) 
+	{
         // Если введенная строка пустая, возвращаем пустую строку
         return "String is empty!";
     }
