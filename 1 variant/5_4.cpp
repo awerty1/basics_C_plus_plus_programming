@@ -32,7 +32,7 @@ std::string find_shortest_word(const std::string& input)
 int main() 
 {
     std::string input;
-    std::cout <<"Введите строку: ";
+    std::cout << "Введите строку: ";
     std::getline(std::cin, input);
     
      // Проверяем наустой ввод или пробелы
@@ -42,7 +42,6 @@ int main()
         return 0;
     }
     
-
     std::string shortestWord = find_shortest_word(input);
     std::cout << "Самое короткое слово: " << shortestWord << std::endl;
 
