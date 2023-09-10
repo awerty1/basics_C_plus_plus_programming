@@ -1,96 +1,53 @@
 /*
-Задание 4. Сформировать и вывести матрицу из n строк и m столбцов. 
-Элементы матрицы должны быть случайными числами в диапазоне от -50 до 50.  
-Отсортировать все строки с нечетными номерами по возрастанию 
-(нумерация  строк ведется со стороны пользователя, т.е. с единицы). 
-Вывести  преобразованную таким образом матрицу.
+Задание 4. Вводится строка символов, которые разделены на слова.
+Пробелы являются разделителями между словами. Поменять местами первое и
+последнее слова. Вывести преобразованную таким образом строку.
 */
 
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include <iomanip>
+#include <string>
+#include <sstream>
+#include <vector>
 
-// Функция для генерации случайного числа в заданном диапазоне
-int getrandomnumber(int min, int max) 
+std::string swapFirstAndLastWord(const std::string& input) 
 {
-    return min + rand() % (max - min + 1);
+    std::stringstream ss(input);
+    std::vector<std::string> words;
+
+    std::string word;
+    while (ss >> word) 
+    {
+        words.push_back(word);
+    }
+
+    if (words.size() < 2) 
+    {
+        // Если введено меньше двух слов, просто возвращаем исходную строку
+        std::cout << "Введено 1 слово " << input << std::endl;
+        return input;
+    }
+
+    std::swap(words.front(), words.back());
+
+    std::string result;
+    for (const std::string& word : words) 
+    {
+        result += word + " ";
+    }
+    // Удаляем лишний пробел в конце строки
+    result.pop_back();
+
+    return result;
 }
 
 int main() 
 {
-    std::srand(std::time(nullptr)); // Инициализация генератора случайных чисел
-      
-    int n, m;
-    do 
-    {
-        std::cout << "Введите количество строк: ";
-        std::cin >> n;
-        std::cout << "Введите количество столбцов: ";
-        std::cin >> m;
+    std::string input;
+    std::cout << "Введите строку: ";
+    std::getline(std::cin, input);
 
-        if (n <= 0 || m <= 0) 
-        {
-            std::cout << "Ошибка: количество строк и столбцов должно быть положительным числом." << std::endl;
-        }
-    } 
-    while (n <= 0 || m <= 0);
-    
-    int** matrix = new int*[n]; // Создание указателя на указатель
-    
-    // Заполнение матрицы случайными числами
-    for (int i = 0; i < n; i++) 
-    {
-        matrix[i] = new int[m]; // Выделение памяти для каждой строки
-        for (int j = 0; j < m; j++) 
-        {
-            matrix[i][j] = getrandomnumber(-50, 50);
-        }
-    }
-    
-    //Вывод матрицы
-    std::cout << "Преобразованная матрица:\n";
-    for (int i = 0; i < n; i++) 
-    {
-        for (int j = 0; j < m; j++) 
-        {
-            std::cout << std::setw(5) << matrix[i][j];
-        }
-        std::cout << std::endl;
-    }
-    
-    // Сортировка строк с нечетными номерами
-    for (int i = 0; i < n; i += 2) 
-    {
-        for (int j = 0; j < m - 1; j++) 
-        {
-            for (int k = 0; k < m - j - 1; k++) 
-            {
-                if (matrix[i][k] > matrix[i][k + 1]) 
-                {
-                    // Обмен значений элементов
-                    int temp = matrix[i][k];
-                    matrix[i][k] = matrix[i][k + 1];
-                    matrix[i][k + 1] = temp;
-                }
-            }
-        }
-    }
-    
-    // Вывод преобразованной матрицы
-    std::cout << "\nПреобразованная матрица:\n";
-    for (int i = 0; i < n; i++) 
-    {
-        for (int j = 0; j < m; j++) 
-        {
-            std::cout << std::setw(5) << matrix[i][j];
-        }
-        std::cout << std::endl;
-        
-        delete[] matrix[i]; // Освобождение памяти для каждой строки
-    }
-    
-    delete[] matrix; // Освобождение памяти для указателя на указатель
-    
+    std::string swapped = swapFirstAndLastWord(input);
+    std::cout << "Преобразованная строка: " << swapped << std::endl;
+
     return 0;
 }
