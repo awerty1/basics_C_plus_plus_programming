@@ -1,5 +1,5 @@
 # list of labs:
-**1:**
+**1:**  
 lab1_1.cpp  
 lab1_2.cpp  
 lab1_3.cpp  
