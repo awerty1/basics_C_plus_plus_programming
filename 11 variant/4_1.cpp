@@ -12,34 +12,43 @@
 */
 
 #include <iostream>
+#include <iomanip>
 
-using namespace std;
-
-int main() {
-int n;
-cout << "Введите размерность матрицы: ";
-cin >> n;
-
-int matrix[n][n];
-
-for (int i = 0; i < n; i++) 
+int main() 
 {
-    for (int j = 0; j < n; j++) 
-    {
-    if ((i + j) == (n - 1)) 
-    {
-        matrix[i][j] = i + 1;
-    } 
-    else 
-    {
-        matrix[i][j] = 0;
-    }
-    
-    cout << matrix[i][j] << " ";
-    }
-    
-    cout << endl;
-}
+	int n;
+	do
+	{
+		std::cout << "Введите размерность матрицы: ";
+		std::cin >> n;
+		
+		if(n <= 0)
+		{
+			std::cout << "Размерность матрицы должна быть положительным числом!\n";
+		}
+	}
+	while (n <= 0);
+	
 
-return 0;
+	int matrix[n][n];
+
+	for (int i = 0; i < n; i++) 
+	{
+		for (int j = 0; j < n; j++) 
+		{
+			if ((i + j) == (n - 1)) 
+			{
+				matrix[i][j] = i + 1;
+			} 
+			else 
+			{
+				matrix[i][j] = 0;
+			}
+		
+			std::cout << std::setw(3) << matrix[i][j];
+		}
+		std::cout << std::endl;
+	}
+
+	return 0;
 }
