@@ -11,14 +11,13 @@
 #include <iomanip>
 #include <exception>
 
-
 void generateMatrix(int** matrix, int rows, int cols) 
 {
     srand(time(0)); // Инициализация генератора случайных чисел
-
+    
     for (int i = 0; i < rows; i++) 
     {
-        try 
+        try
         {
             matrix[i] = new int[cols]; // Выделение памяти для строки матрицы
         } 
@@ -36,7 +35,7 @@ void generateMatrix(int** matrix, int rows, int cols)
             // Бросаем исключение дальше
             throw ex;
         }
-
+        
         for (int j = 0; j < cols; j++) 
         {
             matrix[i][j] = rand() % 101 - 50; // Генерация случайного числа в диапазоне [-50, 50]
@@ -60,7 +59,7 @@ void deleteRowWithMaxDiagonalElement(int** matrix, int& rows, int cols)
 {
     int maxElement = matrix[0][0];
     int maxRowIndex = 0;
-
+    
     for (int i = 1; i < rows; i++) 
     {
         if (matrix[i][i] > maxElement) 
@@ -69,10 +68,10 @@ void deleteRowWithMaxDiagonalElement(int** matrix, int& rows, int cols)
             maxRowIndex = i;
         }
     }
-
+    
     delete[] matrix[maxRowIndex]; // Освобождение памяти, выделенной для строки
     matrix[maxRowIndex] = nullptr;
-
+    
     for (int i = maxRowIndex + 1; i < rows; i++) 
     {
         matrix[i - 1] = matrix[i]; // Сдвиг строк выше удаленной строки
@@ -85,38 +84,38 @@ void deleteRowWithMaxDiagonalElement(int** matrix, int& rows, int cols)
 int main() 
 {
     int n, m;
-
+    
     do 
-	{
+    {
         std::cout << "Введите количество строк: ";
         std::cin >> n;
-    } 
-	while (n <= 0);
-
-    do 
-	{
+    }
+    while (n <= 0);
+    
+    do
+    {
         std::cout << "Введите количество столбцов: ";
         std::cin >> m;
-    } 
-	while (m <= 0);
-
+    }
+    while (m <= 0);
+    
     int** matrix = new int*[n]; // Выделение памяти для матрицы
-
+    
     generateMatrix(matrix, n, m);
-
+    
     std::cout << "Исходная матрица:" << std::endl;
     printMatrix(matrix, n, m);
-
+    
     deleteRowWithMaxDiagonalElement(matrix, n, m);
-
+    
     std::cout << "Преобразованная матрица:" << std::endl;
     printMatrix(matrix, n, m);
-
+    
     for (int i = 0; i < n; i++) 
     {
         delete[] matrix[i]; // Освобождение памяти, выделенной для строк
     }
     delete[] matrix; // Освобождение памяти, выделенной для указателей на строки
-
+    
     return 0;
 }
