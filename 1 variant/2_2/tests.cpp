@@ -12,8 +12,9 @@ void testCalculateTotalLuckyTickets()
 int main() 
 {
     testCalculateTotalLuckyTickets();
-
+    
     std::cout << "All tests passed successfully!" << std::endl;
-
+    
     return 0;
 }
+
