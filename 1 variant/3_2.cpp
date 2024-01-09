@@ -23,7 +23,8 @@ int main()
 
     int* arr = new int[n];
     std::cout << "Введите элементы массива: ";
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i) 
+    {
         std::cin >> arr[i];
     }
     
