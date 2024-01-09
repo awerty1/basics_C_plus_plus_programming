@@ -14,8 +14,10 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
+	
 	int n, k = 0;
-	do {
+	do 
+	{
 
 		cout << "Введите n" << endl;
 		cin >> n;
@@ -40,7 +42,7 @@ int main()
 		        a[j]= a[j+1];
 		    }
 		    SIZE--;
-           i--;
+		    i--;
 		}
 	}
 	cout << "\n";
