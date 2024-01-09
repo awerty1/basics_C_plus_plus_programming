@@ -17,9 +17,9 @@ int main()
 
     // проверяем, что строка не пустая и содержит хотя бы одну букву
     if (!text.empty() && std::any_of(text.begin(), text.end(), [](char c) 
-	{ 
-		return std::isalpha(c); 
-	})) 
+    { 
+        return std::isalpha(c); 
+    })) 
     {
         for (char& c : text) 
         {
