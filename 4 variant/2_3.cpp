@@ -8,47 +8,47 @@
 #include <iostream>
 #include <cmath>
 
-bool isPrime(int number) 
+bool isPrime(int number)
 {
-    if (number <= 1) 
-	{
+    if (number <= 1)
+    {
         return false;
     }
-
+    
     int sqrtNumber = sqrt(number);
-    for (int i = 2; i <= sqrtNumber; i++) 
-	{
-        if (number % i == 0) 
-		{
+    for (int i = 2; i <= sqrtNumber; i++)
+    {
+        if (number % i == 0)
+        {
             return false;
         }
     }
-
+    
     return true;
 }
 
-int main() 
+int main()
 {
     int n;
-
+    
     std::cout << "Введите число n: ";
     std::cin >> n;
-
-    if (std::cin.fail() || n <= 1) 
-	{
+    
+    if (std::cin.fail() || n <= 1)
+    {
         std::cout << "Некорректный ввод! Пожалуйста, введите число больше 1." << std::endl;
         return 0;
     }
-
+    
     std::cout << "Простые числа, меньшие " << n << ":" << std::endl;
-    for (int i = 2; i < n; i++) 
-	{
-        if (isPrime(i)) 
-		{
+    for (int i = 2; i < n; i++)
+    {
+        if (isPrime(i))
+        {
             std::cout << i << " ";
         }
     }
     std::cout << std::endl;
-
+    
     return 0;
 }
