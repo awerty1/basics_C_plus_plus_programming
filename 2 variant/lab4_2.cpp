@@ -10,7 +10,8 @@
 
 using namespace std;
 
-int main() {
+int main() 
+{
 	setlocale(LC_ALL, "Russian");
 	int n, m;
 	cout << "Введите количество строк и столбцов матрицы: \n";
@@ -19,18 +20,21 @@ int main() {
 
 	int a[30][30];
 
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
+	for (int i = 0; i < n; i++) 
+	{
+		for (int j = 0; j < m; j++) 
+		{
 			a[i][j] = rand() % 10 + 1;
 			cout << a[i][j]<< " ";
-			
 		}
 		cout << endl;
 	}
 	cout <<"Среднее арифметическое столбов: \n";
 	double sum[30] = { 0 };
-	for (int j = 0; j < m; j++) {
-		for (int i = 0; i < n; i++) {
+	for (int j = 0; j < m; j++) 
+	{
+		for (int i = 0; i < n; i++) 
+		{
 			sum[j] += a[i][j];
 		}
 		sum[j] /= n;
@@ -38,8 +42,10 @@ int main() {
 		//cout << sum[j]<<"  ";
 	}
 	double max_sum = sum[0];
-	for (int j = 0; j < m; j++) {
-		if (sum[j] > max_sum) {
+	for (int j = 0; j < m; j++) 
+	{
+		if (sum[j] > max_sum) 
+		{
 			max_sum = sum[j];
 		}
 	}
