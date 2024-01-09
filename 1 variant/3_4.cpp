@@ -25,7 +25,8 @@ void deleteDynamicArray(int* arr)
 int main() 
 {
 	int n;
-	do {
+	do 
+	{
 		std::cout << "Введите число n (не больше 20): ";
 		std::cin >> n;
 		  
@@ -33,7 +34,8 @@ int main()
 		{
 			std::cout << "Число n должно быть от 1 до 20." << std::endl;
 		}
-	} while (n > 20 || n <= 0);
+	} 
+	while (n > 20 || n <= 0);
 
 	// Установим генератор случайных чисел в зависимость от времени
 	srand(time(0));
@@ -88,7 +90,7 @@ int main()
 
   
 	if (cCount)
-    	{
+	{
 	        std::cout << "Массив C: ";
 	        for (int i = 0; i < cCount; i++) 
 	        {
