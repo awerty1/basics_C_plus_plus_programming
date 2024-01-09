@@ -15,44 +15,44 @@ const int N = 20;
 
 int main()
 {
-	setlocale(LC_ALL,"Russian");
+    setlocale(LC_ALL,"Russian");
+    
     int a[N], n;
-	cout<<"Введите n \n";
-	cin>>n;
-	for (int i=0;i<n;i++)
-	{
-		a[i]=rand()%100+1;
-		cout<<a[i]<<"\t";
-	}
+    cout<<"Введите n \n";
+    cin>>n;
+    for (int i=0;i<n;i++)
+    {
+        a[i]=rand()%100+1;
+        cout<<a[i]<<"\t";
+    }
     
-    
-	if(n%2==0)
-	{
-	int count = n/2;
-    for (int i=0; i<n/2; i++)
-		{
-			int temp = a[i];
-			a[i] = a[count];
-			a[count++] = temp;
-		}
-	}
-	else 
-	{
-		int count = n/2;
-		for (int i=0; i<n/2; i++)
-		{
-			int temp = a[i];
-			a[i] = a[count];
-			a[count++] = temp;
-		}
-	}
+    if(n%2==0)
+    {
+        int count = n/2;
+        for (int i=0; i<n/2; i++)
+        {
+            int temp = a[i];
+            a[i] = a[count];
+            a[count++] = temp;
+        }
+    }
+    else 
+    {
+        int count = n/2;
+        for (int i=0; i<n/2; i++)
+        {
+            int temp = a[i];
+            a[i] = a[count];
+            a[count++] = temp;
+        }
+    }
     cout << "\n";
     for (int i=0; i<n; i++)
-	{
-		cout << a[i] <<"\t";
-	}
-	
+    {
+        cout << a[i] <<"\t";
+    }
+
     system ("pause");
-	
+
     return 0;
 }  
