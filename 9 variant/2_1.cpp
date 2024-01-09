@@ -13,13 +13,13 @@ int main()
     int n;
     cout << "Введите число: ";
     cin >> n;
-
+    
     cout << "Делители числа " << n << ":\n";
-
+    
     for (int i = 1; i <= n; ++i) 
-	{
+    {
         if ((n % i == 0) && (i != n)) 
-		{
+        {
             cout << i << ", ";
         }
         else if ((n % i == 0) && (i == n))
@@ -27,7 +27,7 @@ int main()
             cout << i << ".";
         }
     }
-
+    
     cout << endl;
     return 0;
 }
