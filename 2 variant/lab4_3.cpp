@@ -10,17 +10,21 @@ k: 1 ≤ k ≤ m. Вывести преобразованную таким об�
 
 using namespace std;
 
-int main() {
+int main() 
+{
 	setlocale(LC_ALL, "Russian");
 	int n, m, k;
 	cout << "Введите количество строк и столбцов \n";
 	cin >> n;
 	cin >> m ;
 	int a[30][30];
-	do {
+	do 
+	{
 		cout << "Введите К";
 		cin >> k;
-	} while (k < 1 || k > m);
+	} 
+	while (k < 1 || k > m);
+	
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < m; j++)
