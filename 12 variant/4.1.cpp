@@ -26,15 +26,15 @@ int main()
         std::cin >> n; 
         
         if(n <= 0)
-		{
-			std::cout << "Размерность матрицы должна быть положительным числом!\n";
-		}
+        {
+            std::cout << "Размерность матрицы должна быть положительным числом!\n";
+        }
     }
     while(n <= 0);
     
-
+    
     int matrix[n][n];
-
+    
     // Generate random numbers
     srand(time(0));
 
