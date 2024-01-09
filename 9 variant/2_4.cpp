@@ -22,7 +22,7 @@ int main()
     cin >> d;
     
     while (true) 
-	{
+    {
         term = pow(-1, n+1) / ((2*n-1) * (2*n));
         if (abs(term) < d) break;
         
