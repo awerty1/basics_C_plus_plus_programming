@@ -15,15 +15,15 @@ int main()
     double result;
     
     if (A < 0) 
-	{
+    {
         result = -A;
     } 
-	else if (A >= 0 && A <= 4) 
-	{
+    else if (A >= 0 && A <= 4) 
+    {
         result = std::sqrt(A);
     } 
-	else 
-	{
+    else 
+    {
         result = 2;
     }
     
