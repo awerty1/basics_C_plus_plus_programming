@@ -26,7 +26,7 @@ int generateRandomNumber(int min, int max)
 void fillArrayWithRandomNumbers(int* array, int size, int min, int max) 
 {
     for (int i = 0; i < size; i++) 
-	{
+    {
         array[i] = generateRandomNumber(min, max);
     }
 }
@@ -34,7 +34,7 @@ void fillArrayWithRandomNumbers(int* array, int size, int min, int max)
 void printArray(const int* array, int size) 
 {
     for (int i = 0; i < size; i++) 
-	{
+    {
         std::cout << array[i] << " ";
     }
     std::cout << std::endl;
@@ -43,15 +43,15 @@ void printArray(const int* array, int size)
 bool hasTripleValue(int value, const int* array, int size) 
 {
     int tripleValue = value * 3;
-
+    
     for (int i = 0; i < size; i++) 
-	{
+    {
         if (array[i] == tripleValue) 
-		{
+        {
             return true;
         }
     }
-
+    
     return false;
 }
 
@@ -63,9 +63,9 @@ void filterArray(const int* source, int sourceSize, int*& destination, int& dest
     const int* sourcePtr = source;
     int* destinationPtr = destination;
     for (int i = 0; i < sourceSize; i++) 
-	{
+    {
         if (hasTripleValue(*sourcePtr, filter, filterSize)) 
-		{
+        {
             *destinationPtr = *sourcePtr;
             destinationPtr++;
             destinationSize++;
@@ -79,37 +79,37 @@ int main()
     int N;
     std::cout << "Введите число N (не больше " << MAX_N << "): ";
     std::cin >> N;
-
+    
     if (N < 1 || N > MAX_N) 
-	{
+    {
         std::cout << "Некорректное значение N.\n";
         return 0;
     }
-
+    
     srand(time(0));
-
+    
     int* arrayA = new int[N];
     int* arrayB = new int[N];
     int* arrayC = new int[N];
     int sizeC = 0;
-
+    
     fillArrayWithRandomNumbers(arrayA, N, 0, MAX_A);
     fillArrayWithRandomNumbers(arrayB, N, 0, MAX_B);
-
+    
     std::cout << "Массив A:\n";
     printArray(arrayA, N);
-
+    
     std::cout << "Массив B:\n";
     printArray(arrayB, N);
-
+    
     filterArray(arrayA, N, arrayC, sizeC, arrayB, N);
-
+    
     std::cout << "Массив C:\n";
     printArray(arrayC, sizeC);
-
+    
     delete[] arrayA;
     delete[] arrayB;
     delete[] arrayC;
-
+    
     return 0;
 }
