@@ -50,13 +50,17 @@ int main()
         {
             matrix[i][j] = rand() % 21 - 10;
             if (matrix[i][j] < 0)
+            {
                 negatives++;
+            }
             std::cout << std::setw(5) << matrix[i][j];
         }
         std::cout << std::setw(5) <<"NEG:" << negatives << std::endl;
 
         if (negatives > maxNegatives)
+        {
             maxNegatives = negatives;
+        }
     }
 
     std::cout << "Наибольшее количество отрицательных чисел: " << maxNegatives << std::endl;
