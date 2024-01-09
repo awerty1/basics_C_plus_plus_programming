@@ -19,22 +19,22 @@ int main()
     
     cout << "Введите значение n (<=20): ";
     cin >> n;
-
+    
     if (n <= 0 || n > 20) 
     {
         cout << "Некорректное значение n!. \
                 Пожалуйста введите число между 1 и 20." << endl;
         return 0;
     }
-
+    
     int array_A[n];
     cout << "Current array:" << endl;
     for (int i = 0; i < n; i++) 
-	{
+    {
         array_A[i] = rand() % 21 - 10;
         cout << array_A[i] << " ";
         if ((array_A[i] > 0) && (array_A[i] % 2 == 0)) 
-		{
+        {
             product *= array_A[i];
             count++;
         }
@@ -45,9 +45,9 @@ int main()
     {
         product = 0;
     }
-
+    
     cout << "Произведение положительных четных элементов: " << product << endl;
     cout << "Количество положительных четных элементов: " << count << endl;
-
+    
     return 0;
 }
