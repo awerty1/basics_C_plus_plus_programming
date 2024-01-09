@@ -14,7 +14,7 @@
 #include <iomanip>
 
 // Функция для генерации случайного числа в заданном диапазоне
-int getRandomNumber(int min, int max) 
+int getRandomNumber(int min, int max)
 {
     return min + rand() % (max - min + 1);
 }
@@ -22,9 +22,9 @@ int getRandomNumber(int min, int max)
 // Функция для вывода матрицы на экран
 void printMatrix(const std::vector<std::vector<int>>& matrix) 
 {
-    for (const auto& row : matrix) 
+    for (const auto& row : matrix)
     {
-        for (int num : row) 
+        for (int num : row)
         {
             std::cout << std::setw(5) << num;
         }
@@ -36,22 +36,24 @@ int main()
 {
     // Инициализация генератора случайных чисел
     srand(time(0));
-
+    
     int n, m;
-    do {
+    do
+    {
         std::cout << "Введите количество строк (n): ";
         std::cin >> n;
-    
+        
         std::cout << "Введите количество столбцов (m): ";
         std::cin >> m;
-    
+        
         if (n <= 0 || m <= 0) 
         {
             std::cout << "Количество строк и столбцов должно быть больше 0. \
             \nПопробуйте снова." << std::endl;
         }
-    } while (n <= 0 || m <= 0);
-
+    }
+    while (n <= 0 || m <= 0);
+    
     // Создание матрицы и заполнение случайными числами
     std::vector<std::vector<int>> matrix(n, std::vector<int>(m));
     for (int i = 0; i < n; ++i) 
@@ -61,10 +63,10 @@ int main()
             matrix[i][j] = getRandomNumber(-50, 50);
         }
     }
-
+    
     std::cout << "Исходная матрица:" << std::endl;
     printMatrix(matrix);
-
+    
     // Сортировка строк с нечетными номерами
     for (int i = 1; i < n; i += 2) 
     {
@@ -73,9 +75,9 @@ int main()
             std::sort(matrix[i].begin(), matrix[i].end());    
         }
     }
-
+    
     std::cout << "\nПреобразованная матрица:" << std::endl;
     printMatrix(matrix);
-
+    
     return 0;
 }
