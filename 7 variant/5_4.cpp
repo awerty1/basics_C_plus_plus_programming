@@ -13,15 +13,16 @@ int main()
     std::cout << "Введите строку: ";
     std::string input;
     std::getline(std::cin, input);
-
+    
     std::cout << "Введите число n: ";
     int n;
     std::cin >> n;
-    if (std::cin.fail()) {
+    if (std::cin.fail())
+    {
         std::cout << "Ошибка при вводе числа." << std::endl;
         return 1; // или другой код ошибки
     }
-
+    
     std::string inputCopy = input;
     std::string word;
     std::string delimiter = " ";
@@ -53,6 +54,6 @@ int main()
         std::cout << "Ошибка: " << e.what() << std::endl;
         return 1; // или какой-то другой код ошибки
     }
-
+    
     return 0;
 }
