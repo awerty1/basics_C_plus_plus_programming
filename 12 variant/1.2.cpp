@@ -11,16 +11,16 @@ int main()
     bool is_valid_number = false;
 
     do 
-	{
+    {
         std::cout << "Введите четырехзначное число: ";
         std::cin >> number;
 
         if (number >= 1000 && number <= 9999) 
-		{
+        {
             is_valid_number = true;
         } 
-		else 
-		{
+        else 
+        {
             std::cout << "Ошибка! Введите четырехзначное число." << std::endl;
         }
     } 
