@@ -13,13 +13,13 @@ int main()
     
     std::cout << "Вывод всех четырехзначных чисел:" << std::endl;
     for (int i = 1000; i < SIZE; ++i) 
-	{
+    {
         int secondDigit = (i / 100) % 10;
         int fourthDigit = i % 10;
         
         if (secondDigit != 0 && fourthDigit != 0 && 
-             secondDigit % 2 == 0 && fourthDigit % 4 == 0 && i < last_elem) 
-		{
+            secondDigit % 2 == 0 && fourthDigit % 4 == 0 && i < last_elem) 
+        {
             std::cout << i << ",";
         }
         else if (secondDigit != 0 && fourthDigit != 0 && 
@@ -28,6 +28,6 @@ int main()
             std::cout << i << ".";
         }
     }
-
+    
     return 0;
 }
