@@ -16,26 +16,26 @@ int main()
     int n;
     cout << "Введите размер массива (не больше 20): ";
     cin >> n;
-
+    
     if (n <= 0 || n > 20) 
     {
         cout << "Ошибка: некорректный размер массива" << endl;
         return 0;
     }
-
+    
     int array_a[20];
     cout << "Введите элементы массива: ";
     for (int i = 0; i < n; i++) 
     {
         cin >> array_a[i];
     }
-
+    
     int add_elem;
     cout << "Введите число для вставки: ";
     cin >> add_elem;
-
+    
     for (int i = 0; i < n; i++) 
-	{
+    {
         if (array_a[i] % 2 != 0) 
         {
             for (int j = n; j > i; j--) 
@@ -47,13 +47,13 @@ int main()
             i++;
         }
     }
-
+    
     cout << "Измененный массив: ";
     for (int i = 0; i < n; i++) 
     {
         cout << array_a[i] << " ";
     }
     cout << endl;
-
+    
     return 0;
 }
