@@ -6,11 +6,11 @@
 
 #include <iostream>
 
-int main() 
+int main()
 {
     std::cout << "Трехзначные числа, у которых вторая цифра кратна 3, а третья цифра кратна 4:" << std::endl;
     
-    for (int i = 100; i <= 999; ++i) 
+    for (int i = 100; i <= 999; ++i)
     {
         int secondDigit = (i / 10) % 10;
         int thirdDigit = i % 10;
