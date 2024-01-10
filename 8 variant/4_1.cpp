@@ -16,7 +16,7 @@ using namespace std;
 
 const int MAX_SIZE = 10;
 
-int main() 
+int main()
 {
     int n;
     int matrix[MAX_SIZE][MAX_SIZE];
@@ -25,11 +25,11 @@ int main()
     cin >> n;
 
     // заполнение матрицы
-    for (int i = 0; i < n; i++) 
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < n; j++) 
+        for (int j = 0; j < n; j++)
         {
-            if (i == j || i + j == n - 1) 
+            if (i == j || i + j == n - 1)
             {
                 matrix[i][j] = 0;
             } 
@@ -41,9 +41,9 @@ int main()
     }
     
     // вывод матрицы на экран
-    for (int i = 0; i < n; i++) 
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < n; j++) 
+        for (int j = 0; j < n; j++)
         {
             cout << matrix[i][j] << " ";
         }
