@@ -39,7 +39,7 @@ void inputTriangleSides(double& x, double& y, double& z)
     while (!isTriangleExist(x, y, z));
 }
 
-int main() 
+int main()
 {
     double x, y, z;
     
@@ -47,7 +47,7 @@ int main()
     inputTriangleSides(x, y, z);
     
     // Проверка на тупоугольность
-    if (isTriangleObtuse(x, y, z)) 
+    if (isTriangleObtuse(x, y, z))
     {
         std::cout << "Треугольник является тупоугольным." << std::endl;
     } 
