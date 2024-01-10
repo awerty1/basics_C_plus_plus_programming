@@ -8,7 +8,7 @@
 int main()
 {
     int sum = 0;
-
+    
     // Iterate over numbers from 25 to 55
     for (int num = 25; num <= 55; num++)
     {
@@ -19,7 +19,7 @@ int main()
             sum += num;
         }
     }
-
+    
     // Output the result
     std::cout << "Sum of even numbers: " << sum << std::endl;
 
