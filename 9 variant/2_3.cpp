@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-bool is_palindrome(int n) 
+bool is_palindrome(int n)
 {
     int rev = 0;
     int original = n;
@@ -20,24 +20,24 @@ bool is_palindrome(int n)
     return (original == rev);
 }
 
-int main() 
+int main()
 {
     int n;
     std::cout << "Введите число: ";
     std::cin >> n;
     
     // Проверка на корректность ввода
-    if (n <= 0 || n >= 1000000) 
+    if (n <= 0 || n >= 1000000)
     {
         std::cout << "Ошибка ввода" << std::endl;
         return 0;
     }
     
-    if (is_palindrome(n)) 
+    if (is_palindrome(n))
     {
         std::cout << "yes" << std::endl;
     } 
-    else 
+    else
     {
         std::cout << "no" << std::endl;
     }
