@@ -18,29 +18,29 @@ const int MAX_N = 20;
 const int MAX_A = 10;
 const int MAX_B = 30;
 
-int generateRandomNumber(int min, int max) 
+int generateRandomNumber(int min, int max)
 {
     return min + rand() % (max - min + 1);
 }
 
-void fillArrayWithRandomNumbers(int* array, int size, int min, int max) 
+void fillArrayWithRandomNumbers(int* array, int size, int min, int max)
 {
-    for (int i = 0; i < size; i++) 
+    for (int i = 0; i < size; i++)
     {
         array[i] = generateRandomNumber(min, max);
     }
 }
 
-void printArray(const int* array, int size) 
+void printArray(const int* array, int size)
 {
-    for (int i = 0; i < size; i++) 
+    for (int i = 0; i < size; i++)
     {
         std::cout << array[i] << " ";
     }
     std::cout << std::endl;
 }
 
-bool hasTripleValue(int value, const int* array, int size) 
+bool hasTripleValue(int value, const int* array, int size)
 {
     int tripleValue = value * 3;
     
@@ -55,14 +55,14 @@ bool hasTripleValue(int value, const int* array, int size)
     return false;
 }
 
-void filterArray(const int* source, int sourceSize, int*& destination, int& destinationSize, const int* filter, int filterSize) 
+void filterArray(const int* source, int sourceSize, int*& destination, int& destinationSize, const int* filter, int filterSize)
 {
     // Избегаем ненужных копирований данных
     // Используем указатели на исходный массив и результат
     destinationSize = 0;
     const int* sourcePtr = source;
     int* destinationPtr = destination;
-    for (int i = 0; i < sourceSize; i++) 
+    for (int i = 0; i < sourceSize; i++)
     {
         if (hasTripleValue(*sourcePtr, filter, filterSize)) 
         {
@@ -74,7 +74,7 @@ void filterArray(const int* source, int sourceSize, int*& destination, int& dest
     }
 }
 
-int main() 
+int main()
 {
     int N;
     std::cout << "Введите число N (не больше " << MAX_N << "): ";
