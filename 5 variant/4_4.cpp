@@ -20,7 +20,7 @@ int getRandomNumber(int min, int max)
 }
 
 // Функция для вывода матрицы на экран
-void printMatrix(const std::vector<std::vector<int>>& matrix) 
+void printMatrix(const std::vector<std::vector<int>>& matrix)
 {
     for (const auto& row : matrix)
     {
@@ -32,7 +32,7 @@ void printMatrix(const std::vector<std::vector<int>>& matrix)
     }
 }
 
-int main() 
+int main()
 {
     // Инициализация генератора случайных чисел
     srand(time(0));
@@ -46,7 +46,7 @@ int main()
         std::cout << "Введите количество столбцов (m): ";
         std::cin >> m;
         
-        if (n <= 0 || m <= 0) 
+        if (n <= 0 || m <= 0)
         {
             std::cout << "Количество строк и столбцов должно быть больше 0. \
             \nПопробуйте снова." << std::endl;
@@ -68,7 +68,7 @@ int main()
     printMatrix(matrix);
     
     // Сортировка строк с нечетными номерами
-    for (int i = 1; i < n; i += 2) 
+    for (int i = 1; i < n; i += 2)
     {
         if (i < matrix.size())
         {
