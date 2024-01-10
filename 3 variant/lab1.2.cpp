@@ -11,22 +11,22 @@ int main()
 {
     int seconds;
     do 
-	{
+    {
         std::cout << "Введите интервал в секундах: ";
         std::cin >> seconds;
         
         if (seconds < 0) 
-		{
+        {
             std::cout << "Ошибка! Введите положительное число." << std::endl;
         }
     } 
-	while (seconds < 0);
-
+    while (seconds < 0);
+    
     int hours = seconds / 3600;
     int minutes = (seconds % 3600) / 60;
     int remainingSeconds = (seconds % 3600) % 60;
-
+    
     std::cout << hours << " ч. " << minutes << " м. " << remainingSeconds << " сек." << std::endl;
-
+    
     return 0;
 }
