@@ -10,7 +10,7 @@
 
 using namespace std;
 
-int main() 
+int main()
 {
 // объявление переменных
     string inputString;
@@ -29,12 +29,12 @@ int main()
     string resultString = "";
     
     // цикл по символам входной строки
-    for (int i = 0; i <= inputString.length(); i++) 
+    for (int i = 0; i <= inputString.length(); i++)
     {
         if (inputString[i] == ' ' || i == inputString.length()) //если пробел или конец слова
         {
             // если текущее слово - слово для удвоения, то добавляем его в результирующую строку дважды
-            if (currentWordIndex == wordNumber) 
+            if (currentWordIndex == wordNumber)
             {
                 resultString += currentWord + " " + currentWord + " ";
             } 
