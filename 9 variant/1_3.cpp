@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-int main() 
+int main()
 {
     int month, day;
     
@@ -17,19 +17,19 @@ int main()
     std::cout << "Введите номер дня: ";
     std::cin >> day;
     
-    if (month == 3 && day == 8) 
+    if (month == 3 && day == 8)
     {
         std::cout << "Поздравляю с 8 Марта! 🌹" << std::endl;
     } 
-    else if (month == 5 && day == 1) 
+    else if (month == 5 && day == 1)
     {
         std::cout << "Поздравляю с 1 Мая! 🌼" << std::endl;
     } 
-    else if (month == 1 && day == 1) 
+    else if (month == 1 && day == 1)
     {
         std::cout << "Поздравляю с Новым Годом! 🎉" << std::endl;
     } 
-    else 
+    else
     {
         std::cout << "Праздник не найден." << std::endl;
     }
