@@ -8,7 +8,7 @@
 #include <iostream>
 using namespace std;
 
-int main() 
+int main()
 {
     int n; 
     int product = 1; 
@@ -20,7 +20,7 @@ int main()
     cout << "Введите значение n (<=20): ";
     cin >> n;
     
-    if (n <= 0 || n > 20) 
+    if (n <= 0 || n > 20)
     {
         cout << "Некорректное значение n!. \
                 Пожалуйста введите число между 1 и 20." << endl;
@@ -29,11 +29,11 @@ int main()
     
     int array_A[n];
     cout << "Current array:" << endl;
-    for (int i = 0; i < n; i++) 
+    for (int i = 0; i < n; i++)
     {
         array_A[i] = rand() % 21 - 10;
         cout << array_A[i] << " ";
-        if ((array_A[i] > 0) && (array_A[i] % 2 == 0)) 
+        if ((array_A[i] > 0) && (array_A[i] % 2 == 0))
         {
             product *= array_A[i];
             count++;
