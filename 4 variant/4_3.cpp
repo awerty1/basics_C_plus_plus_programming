@@ -81,11 +81,11 @@ void deleteRowWithMaxDiagonalElement(int** matrix, int& rows, int cols)
     rows--; // Уменьшение количества строк на 1
 }
 
-int main() 
+int main()
 {
     int n, m;
     
-    do 
+    do
     {
         std::cout << "Введите количество строк: ";
         std::cin >> n;
@@ -111,7 +111,7 @@ int main()
     std::cout << "Преобразованная матрица:" << std::endl;
     printMatrix(matrix, n, m);
     
-    for (int i = 0; i < n; i++) 
+    for (int i = 0; i < n; i++)
     {
         delete[] matrix[i]; // Освобождение памяти, выделенной для строк
     }
