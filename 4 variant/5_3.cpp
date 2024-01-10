@@ -8,7 +8,7 @@
 #include <algorithm>
 #include <cctype>
 
-bool isPalindrome(const std::string& word) 
+bool isPalindrome(const std::string& word)
 {
     std::string processedWord;
     
@@ -28,7 +28,7 @@ bool isPalindrome(const std::string& word)
     return processedWord == reversedWord;
 }
 
-int main() 
+int main()
 {
     std::string word;
     std::cout << "Введите слово: ";
