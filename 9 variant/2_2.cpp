@@ -6,19 +6,19 @@
 
 #include <iostream>
 
-int main() 
+int main()
 {
     int SIZE = 10000;
     int last_elem = 9898;
     
     std::cout << "Вывод всех четырехзначных чисел:" << std::endl;
-    for (int i = 1000; i < SIZE; ++i) 
+    for (int i = 1000; i < SIZE; ++i)
     {
         int secondDigit = (i / 100) % 10;
         int fourthDigit = i % 10;
         
         if (secondDigit != 0 && fourthDigit != 0 && 
-            secondDigit % 2 == 0 && fourthDigit % 4 == 0 && i < last_elem) 
+            secondDigit % 2 == 0 && fourthDigit % 4 == 0 && i < last_elem)
         {
             std::cout << i << ",";
         }
