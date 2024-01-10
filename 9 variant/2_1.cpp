@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int main() 
+int main()
 {
     int n;
     cout << "Введите число: ";
@@ -16,9 +16,9 @@ int main()
     
     cout << "Делители числа " << n << ":\n";
     
-    for (int i = 1; i <= n; ++i) 
+    for (int i = 1; i <= n; ++i)
     {
-        if ((n % i == 0) && (i != n)) 
+        if ((n % i == 0) && (i != n))
         {
             cout << i << ", ";
         }
