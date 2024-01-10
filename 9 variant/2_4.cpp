@@ -13,7 +13,7 @@
 
 using namespace std;
 
-int main() 
+int main()
 {
     double d, S = 0.0, term;
     int n = 1;
@@ -21,7 +21,7 @@ int main()
     cout << "Введите значение погрешности (d < 1): ";
     cin >> d;
     
-    while (true) 
+    while (true)
     {
         term = pow(-1, n+1) / ((2*n-1) * (2*n));
         if (abs(term) < d) break;
