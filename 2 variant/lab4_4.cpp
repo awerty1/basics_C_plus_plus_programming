@@ -31,14 +31,15 @@ int main()
 	{
 		for (int j = 0; j < m-i-1; j++)
 		{
-			if (a[0][j] > a[0][j + 1]){
+			if (a[0][j] > a[0][j + 1])
+			{
 				for (int p = 0; p < n; p++)
 				{
 					int t = a[p][j];
 					a[p][j] = a[p][j + 1];
 					a[p][j + 1] = t;
 				}
-				}
+			}
 		}
 	}
 
