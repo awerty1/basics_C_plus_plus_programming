@@ -24,33 +24,35 @@ void generateArray(int N, int array[])
 {
     std::srand(std::time(0)); // Инициализация генератора случайных чисел
     for (int i = 0; i < N; ++i) 
-	{
+    {
         array[i] = std::rand() % 21 - 10; // Генерация случайного числа от -10 до 10
     }
 }
 
 void printArray(int N, int array[]) 
 {
-	// Вывод массива на экран
+    // Вывод массива на экран
     for (int i = 0; i < N; ++i) 
-	{
+    {
         std::cout << array[i] << " ";
     }
+    
     std::cout << std::endl;
 }
 
 int calculateSumGreaterThanFirst(int N, int array[]) 
 {
-	// Сумму элементов массива, которые больше первого элемента этого массива
+    // Сумму элементов массива, которые больше первого элемента этого массива
     int firstElement = array[0];
     int sum = 0;
     for (int i = 1; i < N; ++i) 
-	{
+    {
         if (array[i] > firstElement) 
-		{
+        {
             sum += array[i];
         }
     }
+    
     return sum;
 }
 
@@ -60,26 +62,27 @@ int calculateMaxCount(int N, int array[])
     int max = array[0];
     int count = 1;
     for (int i = 1; i < N; ++i) 
-	{
+    {
         if (array[i] > max) 
-		{
+        {
             max = array[i];
             count = 1;
         } 
-		else if (array[i] == max) 
-		{
+        else if (array[i] == max) 
+        {
             count++;
         }
     }
+    
     return count;
 }
 
 void swapFirstAndSecondHalves(int N, int array[]) 
 {
-	// Поменять местами первую и вторую половины массива
+// Поменять местами первую и вторую половины массива
     int middle = N / 2;
     for (int i = 0; i < middle; ++i) 
-	{
+    {
         int temp = array[i];
         array[i] = array[middle + i];
         array[middle + i] = temp;
@@ -92,13 +95,13 @@ int main()
     std::cout << "Введите количество элементов массива (не более 20): ";
     std::cin >> N;
 
-	// обработка исключительной ситуации
+    // обработка исключительной ситуации
     if (N > 20) 
-	{
+    {
         std::cout << "Ошибка! Количество элементов превышает 20." << std::endl;
         return 0;
     }
-
+    
     int array[20];
 
     generateArray(N, array);
