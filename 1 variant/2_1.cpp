@@ -17,7 +17,8 @@ int main()
     // Ввод чисел
     for (int i = 0; i < sequenceLength; ++i)
     {
-        while (!(std::cin >> numbers[i])) {
+        while (!(std::cin >> numbers[i])) 
+        {
             std::cout << "Ошибка ввода. Пожалуйста, введите целое число: ";
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
