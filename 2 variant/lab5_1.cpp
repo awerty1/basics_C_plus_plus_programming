@@ -11,6 +11,7 @@ using namespace std;
 int main() 
 { 
 	setlocale(LC_ALL, "Russian"); 
+	
 	string str; 
 	cout << "Введите строку: "; 
 	getline(cin, str); 
