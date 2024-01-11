@@ -16,10 +16,10 @@
 int main()
 {
     srand(time(NULL)); // инициализация генератора случайных чисел
-
+    
     int n, m;
     bool input_success = false;
-
+    
     do 
     {
         std::cout << "Введите количество строк матрицы: ";
@@ -33,11 +33,13 @@ int main()
         {
             input_success = true;
         }
-    } while (!input_success);
+    } 
+    while (!input_success);
     
     input_success = false;
     
-    do {
+    do 
+    {
         std::cout << "Введите количество столбцов матрицы: ";
         if (!(std::cin >> m) || m <= 0 || std::cin.fail()) 
         {
@@ -49,8 +51,9 @@ int main()
         {
             input_success = true;
         }
-    } while (!input_success);
-
+    } 
+    while (!input_success);
+    
     int** matrix = new int*[n]; // создание двумерного динамического массива
     for (int i = 0; i < n; i++)
     {
@@ -60,7 +63,7 @@ int main()
             matrix[i][j] = rand() % 101 - 50; // заполнение матрицы случайными числами от -50 до 50
         }
     }
-
+    
     std::cout << "Исходная матрица:\n";
     for (int i = 0; i < n; i++)
     {
@@ -70,12 +73,12 @@ int main()
         }
         std::cout << std::endl;
     }
-
+    
     for (int i = 1; i < n; i += 2) // сортировка строк с четными номерами
     {
         sort(matrix[i], matrix[i] + m, std::greater<int>()); // сортировка по убыванию
     }
-
+    
     std::cout << "Преобразованная матрица:\n";
     for (int i = 0; i < n; i++)
     {
@@ -85,15 +88,13 @@ int main()
         }
         std::cout << std::endl;
     }
-
+    
     // освобождение памяти
     for (int i = 0; i < n; i++)
     {
         delete[] matrix[i];
     }
     delete[] matrix;
-
+    
     return 0;
 }
-
-
