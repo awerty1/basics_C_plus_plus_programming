@@ -18,7 +18,8 @@ void generateMatrix(int** matrix, int rows, int columns)
     srand(time(NULL));
     for (int i = 0; i < rows; i++) 
     {
-        for (int j = 0; j < columns; j++) {
+        for (int j = 0; j < columns; j++) 
+        {
             matrix[i][j] = rand() % (MAX_VALUE - MIN_VALUE + 1) + MIN_VALUE;
         }
     }
@@ -42,7 +43,8 @@ void printMatrix(int** matrix, int rows, int columns)
         for (int j = 0; j < columns; j++) 
         {
             int elementWidth = std::to_string(matrix[i][j]).length();
-            if (elementWidth > maxElementWidth) {
+            if (elementWidth > maxElementWidth) 
+            {
                 maxElementWidth = elementWidth;
             }
         }
