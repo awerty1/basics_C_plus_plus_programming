@@ -7,11 +7,11 @@
 
 double calculate_volume(double length, double width, double height)
 {
-	if (length <= 0 || width <= 0 || height <= 0)
-	{
-		throw std::runtime_error("Все параметры параллелепипеда должны быть положительными числами.");
-	}
-	return length * width * height;
+    if (length <= 0 || width <= 0 || height <= 0) 
+    {
+        throw std::runtime_error("Все параметры параллелепипеда должны быть положительными числами.");
+    }
+    return length * width * height;
 }
 
 int main() 
@@ -20,13 +20,13 @@ int main()
     bool isValidInput = false;
     
     do 
-	{
+    {
         std::cout << "Введите длину параллелепипеда: ";
         std::cin >> length;
-
+        
         std::cout << "Введите ширину параллелепипеда: ";
         std::cin >> width;
-
+        
         std::cout << "Введите высоту параллелепипеда: ";
         std::cin >> height;
         
@@ -41,12 +41,7 @@ int main()
             std::cout << "Ошибка: " << ex.what() << std::endl;
         }
     } 
-	while(!isValidInput);
-
+    while(!isValidInput);
+    
     return 0;
 }
-
-
-
-
-
