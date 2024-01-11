@@ -1,7 +1,8 @@
 // Файл lucky_tickets.cpp
 #include "lucky_tickets.h"
 
-size_t calculateTotalLuckyTickets() {
+size_t calculateTotalLuckyTickets() 
+{
     size_t count = 0;
 
     for (int digit1 = 0; digit1 <= 9; digit1++) {
