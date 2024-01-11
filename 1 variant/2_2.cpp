@@ -6,7 +6,8 @@
 
 #include <iostream>
 
-int countLuckyTickets() {
+int countLuckyTickets() 
+{
     int count = 0;
 
     for (int digit1 = 0; digit1 <= 9; digit1++) 
