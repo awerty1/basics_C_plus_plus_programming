@@ -9,23 +9,31 @@
 
 using namespace std; 
 
-int main() { 
- setlocale(LC_ALL, "Russian"); 
-string str; 
- cout << "Введите строку: \n"; 
- getline(cin, str); 
- str += ' '; 
-string word = ""; 
-for (int i = 0; i < str.length(); i++) { 
- if (str[i] != ' ') { 
- word += str[i]; 
- } 
- else { 
- if (word.length() == 4) { 
- cout << word << endl; 
- } 
- word = ""; 
- } 
- } 
-return 0; 
+int main() 
+{ 
+    setlocale(LC_ALL, "Russian"); 
+    
+    string str; 
+    
+    cout << "Введите строку: \n"; 
+    getline(cin, str); 
+    
+    str += ' '; 
+    string word = ""; 
+    for (int i = 0; i < str.length(); i++) 
+    { 
+        if (str[i] != ' ') 
+        { 
+            word += str[i]; 
+        } 
+        else 
+        { 
+            if (word.length() == 4) 
+            { 
+                cout << word << endl; 
+            } 
+            word = ""; 
+        } 
+    } 
+    return 0; 
 }
