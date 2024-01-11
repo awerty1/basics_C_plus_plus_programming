@@ -13,16 +13,18 @@ int main()
 {
     std::size_t n;
     
-    do {
+    do 
+    {
         std::cout << "Введите количество элементов в массиве (не больше 20): ";
         std::cin >> n;
 
         if (n <= 0 || n > 20) 
         {
             std::cout << "Некорректный ввод n. Пожалуйста, введите число от 1 до 20." 
-                    << std::endl;
+                        << std::endl;
         }
-    } while (n <= 0 || n > 20);
+    } 
+    while (n <= 0 || n > 20);
     
     
     int* arr = new int[n];
@@ -37,8 +39,9 @@ int main()
     {
         std::cout << arr[i] << " ";
     }
+    
     std::cout << std::endl;
-
+    
     int insertNum;
     std::cout << "Введите число для вставки: ";
     std::cin >> insertNum;
