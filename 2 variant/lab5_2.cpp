@@ -11,20 +11,24 @@ using namespace std;
 
 int main() 
 { 
- setlocale(LC_ALL, "Russian"); 
-string str; 
-char s; 
- cout << "Введите строку \n"; 
- getline(cin, str); 
- cout << "Введите символ \n"; 
- cin >> s; 
-for (int i = 0; i<str.length(); i++) 
- { 
- if (str[i] == s) 
- { 
- str.insert(i, 1, s); 
- i++; 
- } 
- } 
- cout << "Преобразованная строка: " << str; 
+    setlocale(LC_ALL, "Russian");
+     
+    string str; 
+    char s; 
+    cout << "Введите строку \n"; 
+    getline(cin, str); 
+    
+    cout << "Введите символ \n"; 
+    cin >> s; 
+    
+    for (int i = 0; i<str.length(); i++) 
+    { 
+        if (str[i] == s) 
+        {
+            str.insert(i, 1, s); 
+            i++; 
+        }
+    } 
+    
+    cout << "Преобразованная строка: " << str; 
 }
