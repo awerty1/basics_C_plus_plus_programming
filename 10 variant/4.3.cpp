@@ -30,7 +30,8 @@ void printMatrix(int** matrix, int size)
     }
 }
 
-int main() {
+int main() 
+{
     srand(time(0));
 
     int size;
