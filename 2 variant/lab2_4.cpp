@@ -16,21 +16,21 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	double d,s=0, a=1, b=1;
-	int i, c=0;
+	double d, s = 0, a = 1, b = 1;
+	int i, c = 0;
 	cout << "Введите d \n";
 	cin >> d;
-	if ((d < 1) and (d>0))
+	if ((d < 1) and (d > 0))
 	{
-		for (i = 2;(a > d) or (b > d);i = i + 2)
+		for (i = 2; (a > d) or (b > d); i = i + 2)
 		{
-			c= i + 2;
+			c = i + 2;
 			a = 1 / pow(i, 3);
 			b = 1 / pow(c, 3);
 			s += a - b;
 		}
 	}
-	else cout<<("Введите значение меньше 1 \n");
+	else cout << ("Введите значение меньше 1 \n");
 	cout << "S= " << s << "\n";
 	system("pause");
 }
