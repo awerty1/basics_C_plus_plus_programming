@@ -8,7 +8,7 @@
 int main()
 {
 	int number; 
-	int sum=0;
+	int sum = 0;
 	
 	std::cout << "Введите четырехзначное число: \n";
 	std::cin >> number;
