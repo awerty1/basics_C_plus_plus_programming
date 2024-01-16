@@ -8,15 +8,18 @@
 int main()
 {
     int number;
-    std::cout << "Введите четырехзначное число: ";
-    std::cin >> number;
-
-    // Проверяем, является ли введенное число четырехзначным
-    if (number < 1000 || number > 9999)
+    do
     {
-        std::cout << "Ошибка! Введенное число не является четырехзначным." << std::endl;
-        return 0;
-    }
+        std::cout << "Введите четырехзначное число: ";
+        std::cin >> number;
+
+        // Проверяем, является ли введенное число четырехзначным
+        if (number < 1000 || number > 9999)
+        {
+            std::cout << "Ошибка! Введенное число не является четырехзначным." << std::endl;
+        }
+    } 
+    while (number < 1000 || number > 9999);
 
     int secondDigit = (number / 10) % 10;
     int fourthDigit = number % 10;
