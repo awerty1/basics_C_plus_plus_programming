@@ -57,7 +57,8 @@ int getValidInput(const std::string &message)
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
         
-    } while (!validInput);
+    } 
+    while (!validInput);
     
     return input;
 }
