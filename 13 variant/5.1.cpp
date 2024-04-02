@@ -15,5 +15,6 @@ int main() {
     transform(str.begin(), str.end(), str.begin(), ::tolower);
     
     std::cout << "Строка после преобразования:" << str;
+	
     return 0;
 }
