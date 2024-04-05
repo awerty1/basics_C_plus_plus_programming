@@ -7,7 +7,8 @@
 #include <iostream>
 #include <string>
 
-int main() {
+int main() 
+{
     std::string str;
     std::cout << "Введите строку:";
     getline(std::cin, str);
