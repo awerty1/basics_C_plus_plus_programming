@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+   <class>MainWindow</class>
+   <widget class="QMainWindow" name="MainWindow">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>400</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="windowTitle">
+     <string>MainWindow</string>
+    </property>
+    <widget class="QWidget" name="centralWidget">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="labelDescription">
+        <property name="text">
+         <string>Enter a two-digit number:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="buttonCheckGuess">
+        <property name="text">
+         <string>Check guess</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="buttonNewGame">
+        <property name="text">
+         <string>New game</string>
+        </property>
+       </widget>
+      </item>
+      <!-- Для тестирования -->
+      <item>
+       <widget class="QLabel" name="labelComputerGuess">
+        <property name="text">
+         <!--<string>Computer's Guess: </string>-->
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelResult">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QMenuBar" name="menuBar">
+      <widget class="QMenu" name="menuGame">
+        <property name="title">
+          <string>Game menu</string>
+        </property>
+        <addaction name="actionCheckGuess"/>
+        <addaction name="actionNewGame"/>
+        <addaction name="actionExit"/>
+      </widget>
+      <addaction name="menuGame"/>
+    </widget>
+    <action name="actionCheckGuess">
+      <property name="text">
+        <string>Check guess</string>
+      </property>
+      <property name="shortcut">
+          <string>Ctrl+Enter</string>
+      </property>
+    </action>
+    <action name="actionNewGame">
+      <property name="text">
+        <string>New game</string>
+      </property>
+      <property name="shortcut">
+          <string>Ctrl+N</string>
+      </property>
+    </action>
+    <action name="actionExit">
+        <property name="text">
+            <string>Exit</string>
+        </property>
+        <property name="shortcut">
+            <string>Ctrl+Q</string>
+        </property>
+    </action>
+    <widget class="QToolBar" name="mainToolBar">
+     <attribute name="toolBarArea">
+      <enum>TopToolBarArea</enum>
+     </attribute>
+     <attribute name="toolBarBreak">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+    <widget class="QStatusBar" name="statusBar"/>
+   </widget>
+   <layoutdefault spacing="6" margin="11"/>
+   <resources/>
+   <connections/>
+</ui>
