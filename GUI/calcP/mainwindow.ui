@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
+        <widget class="QWidget" name="centralWidget">
+            <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                    <widget class="QLabel" name="labelFirstNumber">
+                        <property name="text">
+                            <string>Первое число:</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLineEdit" name="lineEditFirstNumber"/>
+                </item>
+                <item>
+                    <widget class="QLabel" name="labelPlus">
+                        <property name="text">
+                            <string>...</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLabel" name="labelSecondNumber">
+                        <property name="text">
+                            <string>Второе число:</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLineEdit" name="lineEditSecondNumber"/>
+                </item>
+                <item>
+                    <widget class="QLabel" name="labelEqualSign">
+                        <property name="text">
+                            <string>=</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLineEdit" name="labelResult"/>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="pushButtonAdd">
+                        <property name="text">
+                            <string>+</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="pushButtonSubtract">
+                        <property name="text">
+                            <string>-</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="pushButtonMultiply">
+                        <property name="text">
+                            <string>*</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="pushButtonDivide">
+                        <property name="text">
+                            <string>/</string>
+                        </property>
+                    </widget>
+                </item>
+
+                <item>
+                    <widget class="QPushButton" name="pushButtonStoreInMemory">
+                        <property name="text">
+                            <string>П</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="pushButtonAddToMemory">
+                        <property name="text">
+                            <string>П+</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="pushButtonClearMemory">
+                        <property name="text">
+                            <string>0->П</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="pushButtonMemoryToOperand1">
+                        <property name="text">
+                            <string>П->1</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="pushButtonMemoryToOperand2">
+                        <property name="text">
+                            <string>П->2</string>
+                        </property>
+                    </widget>
+                </item>
+
+                <item>
+                    <widget class="QLabel" name="labelMemory">
+                        <property name="text">
+                            <string>Память:</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLineEdit" name="lineEditMemory"/>
+                </item>
+
+            </layout>
+        </widget>
+    </widget>
+    <resources/>
+    <connections/>
+</ui>
