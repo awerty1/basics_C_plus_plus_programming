@@ -33,4 +33,6 @@ lab5_5.cpp
 
 **6:**  
 lab11_1.cpp  
+lab11_2.cpp  
+lab11_3.cpp  
 
