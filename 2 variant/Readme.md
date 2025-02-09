@@ -1,38 +1,38 @@
 # list of labs:
 **1:**  
-lab1_1.cpp  
-lab1_2.cpp  
-lab1_3.cpp  
-lab1_4.cpp  
+lab1.1  
+lab1.2  
+lab1.3  
+lab1.4  
 
 **2:**  
-lab2_1.cpp  
-lab2_2.cpp  
-lab2_3.cpp  
-lab2_4.cpp  
+lab2.1  
+lab2.2  
+lab2.3  
+lab2.4  
 
 **3:**  
-3.1.cpp  
-lab3_1 another ver.cpp  
-lab3_2.cpp  
-lab3_3.cpp  
-lab3_4.cpp  
+lab3.1  
+lab3.1 another ver  
+lab3.2  
+lab3.3  
+lab3.4  
 
 **4:**  
-lab4_1.cpp  
-lab4_2.cpp  
-lab4_3.cpp  
-lab4_4.cpp  
+lab4.1  
+lab4.2  
+lab4.3  
+lab4.4  
 
 **5:**  
-lab5_1.cpp  
-lab5_2.cpp  
-lab5_3.cpp  
-lab5_4.cpp  
-lab5_5.cpp  
+lab5.1  
+lab5.2  
+lab5.3  
+lab5.4  
+lab5.5  
 
 **6:**  
-lab11_1.cpp  
-lab11_2.cpp  
-lab11_3.cpp  
+lab11.1  
+lab11.2  
+lab11.3  
 
