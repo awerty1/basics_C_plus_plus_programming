@@ -9,7 +9,7 @@ from this block. For example, laboratoryNumber_ laboratoryNumberFromThisBlock. *
 
 **Specialties:** Software of computing machinery and automation systems
 
-**Subject:** Computer science and programming fundamentals
+**Subject:** Computer science and programming fundamentals.
 
 
 
